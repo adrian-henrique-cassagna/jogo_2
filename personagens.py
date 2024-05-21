@@ -1,5 +1,6 @@
 import pygame
 import random
+
 class personagem:
         def __init__(self,arquivo_imagem,largura,altura,x_inicial,y_inicial):
 
@@ -16,6 +17,8 @@ class personagem:
                 self.hitbox = pygame.mask.from_surface(self.imagem)
 
                 self.hitbox = pygame.mask.from_surface(self.imagem)
+
+                self.pontuacão = 0
                 
         def desenhar(self,tela):
                 tela.blit(self.imagem,(self.posicao_X,self.posicao_Y))
@@ -73,8 +76,4 @@ class personagem:
 
                 if self.posicao_Y > 700:
                         self.posicao_Y = random.randint(0,110)
-                        self.posicao_X = random.randint(0,1000)
-        
-
-        
-                        
+                        self.posicao_X = random.randint(0,1000)                       
